@@ -1,0 +1,1 @@
+export const selectorMovies = (state) => state.movies;
