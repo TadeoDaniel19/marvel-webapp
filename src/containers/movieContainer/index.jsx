@@ -9,11 +9,11 @@ import Error from '../../components/error';
 const MoviesContainer = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    const searchProjects = () => {
+    const searchMovies = () => {
       dispatch(resetMovies());
       dispatch(getMovies());
     };
-    searchProjects();
+    searchMovies();
   }, [dispatch]);
 
   useEffect(() => () => {
@@ -34,7 +34,6 @@ const MoviesContainer = () => {
   }
 
   if (error) {
-    console.log('que hay aqui --->', error)
     return (
       <Error message="Oops!, something went wrong."/>
     )
